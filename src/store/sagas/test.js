@@ -33,12 +33,13 @@ function* fetchTest(action) {
     if (resolve) resolve(res.data)
     // Here we will store response data in redux store  by calling success action
     yield put(testSuccessAction(res.data))
-  } catch (e) {
+  } catch (ex) {
+    console.log(ex.message)
     // Here we show tost in case our api failed
-    showErrorToast(e.res)
-    yield put(testErrorAction(e.res))
+    showErrorToast(ex.message)
+    yield put(testErrorAction(ex.message))
     //  Here we will send back api errors where the action is called
-    if (reject) reject(e)
+    if (reject) reject(ex.message)
   }
 }
 

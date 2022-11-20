@@ -1,15 +1,18 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { AppHeader } from '../components/layout/header/AppHeader'
 import { AuthMiddleware } from './AuthMiddleware'
+const Home = lazy(() => import('../pages/Home'))
 const TestList = lazy(() => import('../pages/TestPage'))
 const Error404 = lazy(() => import('../pages/Error/Error404'))
 
 function AppRoutes() {
   return (
     <BrowserRouter>
+      <AppHeader />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route exact path='/' element={<div>Home Page</div>} />
+          <Route exact path='/' element={<Home />} />
           <Route
             exact
             path='/public-route'
