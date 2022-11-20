@@ -1,0 +1,5 @@
+{
+  "Comment": "Below is sample test TEST_URL, It may not work at time when you are testing so find some other open api and replace",
+  "TEST_URL": "https://animechan.vercel.app/api",
+  "BASE_URL": ""
+}
