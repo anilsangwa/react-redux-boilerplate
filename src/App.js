@@ -1,12 +1,12 @@
 import './App.css'
-import TestList from './pages/TestPage'
+import AppRoutes from './routes'
 
 function App() {
   // let authToken = localStorage.getItem('authToken')
   // axios.defaults.headers.common['Authorization'] = `Bearer ${authToken}`
   return (
     <div className='App'>
-      <TestList />
+      <AppRoutes />
     </div>
   )
 }
