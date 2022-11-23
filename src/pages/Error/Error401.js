@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Error401 = () => {
   return (
-    <main className='h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]'>
+    <main className='h-[calc(100vh-56px)] w-full flex flex-col justify-center items-center bg-[#1A2238]'>
       <h1 className='text-9xl font-extrabold text-white tracking-widest'>
         401
       </h1>
